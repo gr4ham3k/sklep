@@ -1,0 +1,43 @@
+.content{
+    display: flex;
+}
+
+.products{
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.single-product{
+    background-color: rgb(255, 26, 26);
+    margin-top: 20px;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.single-product-link{
+    text-decoration: none;
+    color: inherit;
+}
+
+.single-product:hover{
+    transform: scale(1.1);
+}
+
+.single-product p{
+    text-align: center;
+}
+
+.single-product img{
+    width: 300px;
+}
+
+.categories{
+    color: black;
+    text-align: left;
+    width: 300px;
+}
