@@ -11,13 +11,14 @@
     </div>
     <div class="products">
         @foreach ($products as $product)
-        <a href="#" class="single-product-link">
+        <a href="{{ '/'.$product->category->slug.'/'.$product->slug }}" class="single-product-link">
             <div class="single-product">
                 @if ($product->image->isNotEmpty())
                     <img src="{{ asset('storage/'.$product->image->first()->image_path) }}" 
                     alt="{{ $product->image->first()->alt_text }}">
                 @endif
                 <p>{{ $product->name }}</p>
+                <p>{{ $product->price }} zł</p>
             </div>
         </a>     
         @endforeach
