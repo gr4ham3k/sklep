@@ -9,14 +9,18 @@ html,body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.header-link{
+    text-decoration: none;
+    color: black;
+}
 
-main,.header-div,.nav-div,.footer-content{
+main,.header-div,.footer-content{
     max-width: 1600px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-.header-div,.nav-div,.footer-content{
+.header-div,.footer-content{
     display: flex;
     justify-content: space-between;
 }
@@ -25,7 +29,7 @@ main,.header-div,.nav-div,.footer-content{
     margin-top: 15px;
 }
 
-.header-left,.header-right,.nav-left{
+.header-left,.header-right{
     display: flex;
     gap: 20px;
 }
@@ -38,19 +42,30 @@ header{
 
 nav{
     width: 100%;
-    background-color: black;
-    height: 75px;
+    background-color: rgba(29, 27, 27, 0.998);
     color: white;
     
 }
 
+.nav-div{
+    display: flex;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 .logo{
-    margin-top: 30px;
-    font-size: large;
+    text-align: left;
+}
+
+.logo img{
+    width: 40%;
+    margin: 0 auto;
+    
 }
 
 .footer-div{
     width: 100%;
-    background-color: black;
+    background-color: rgba(29, 27, 27, 0.998);;
     color: white;
 }

@@ -1,0 +1,34 @@
+.product{
+    display: flex;
+    gap: 30px;
+}
+
+.description{
+    width: 100%;
+}
+
+.product-left,.product-right{
+    width: 50%;
+    overflow-wrap: break-word;
+}
+
+.product-stock,.product-name,.product-price,.buy-btn{
+    font-size: clamp(20px,2vw,40px)
+}
+
+.product-left img{
+    width: 100%;
+}
+
+.d1{
+    height: 25%;
+}
+
+.d2{
+    display: flex;
+    justify-content: space-between;
+}
+
+.d2-right button{
+    margin-left: 25px;
+}

@@ -7,6 +7,8 @@
     <title>Strona główna</title>
     <link href="{{ asset('css/layout.css') }}" rel="stylesheet">
     <link href="{{ asset('css/content.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/product.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/register.css') }}" rel="stylesheet">
 </head>
 <body>
     <div class="site">
@@ -19,19 +21,20 @@
                 <div class="header-right">
                     <div class="cart">Koszyk</div> 
                     <div class="login">Zaloguj się</div> 
-                    <div class="register">Zarejestruj się</div> 
+                    <div class="register">
+                        <a href="/register" class="header-link">Zarejestruj się</a>
+                    </div> 
                 </div>
             </div>
         </header>
         <nav>
             <div class="nav-div">
-                <div class="nav-left">
-                    <div class="logo">
-                        LOGO
-                    </div>
-                </div>
+            <div class="logo">
+                <a href="/">
+                    <img src="{{ asset('images/LOGO.svg') }}" alt="Logo sklepu">
+                </a>
             </div>
-           
+            </div>
         </nav>
         <main>
             @yield('content')
