@@ -18,7 +18,14 @@
             $request->validate([
                 'username' => 'required|string|min:4|max:20',
                 'email' => 'required|email|unique:users,email|max:50',
-                'password' => 'required|string|min:6|confirmed'
+                'password' => [
+                        'required',
+                        'string',
+                        'min:8',
+                        'regex:/[0-9]/',     
+                        'regex:/[A-Za-z]/',
+                        'confirmed'
+                    ]
             ]);
 
             $user = User::create([

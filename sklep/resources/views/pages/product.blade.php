@@ -16,7 +16,7 @@
                 </div>
                 <div class="d2-right">
                     <span class="product-stock">{{ $product->stock_quantity }} sztuk</span>
-                    <button class="buy-btn">Kup</button>
+                    <button class="buy-btn">Dodaj do koszyka</button>
                 </div>
             </div>
             
