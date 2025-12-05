@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
@@ -11,7 +12,7 @@ Route::get('/',[ProductController::class,'showAll']);
 Route::get('/{category:slug}/{product:slug}',[ProductController::class,'showProduct']);
 Route::get('/register',[RegisterController::class,'show']);
 Route::post('/register',[RegisterController::class,'register']);
-Route::get('/login',[LoginController::class,'show']);
+Route::get('/login',[LoginController::class,'show'])->name('login');
 Route::post('/login',[LoginController::class,'login']);
 Route::post('/logout',function ()
 {
@@ -21,3 +22,5 @@ Route::post('/logout',function ()
 
     return redirect('/');
 });
+
+Route::get('/cart',[CartController::class,'show'])->middleware('auth');

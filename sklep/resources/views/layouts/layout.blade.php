@@ -9,6 +9,7 @@
     <link href="{{ asset('css/content.css') }}" rel="stylesheet">
     <link href="{{ asset('css/product.css') }}" rel="stylesheet">
     <link href="{{ asset('css/register.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/cart.css') }}" rel="stylesheet">
 </head>
 <body>
     <div class="site">
