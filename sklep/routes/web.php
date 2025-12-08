@@ -24,3 +24,4 @@ Route::post('/logout',function ()
 });
 
 Route::get('/cart',[CartController::class,'show'])->middleware('auth');
+Route::post('/cart',[CartController::class,'add'])->middleware('auth');
