@@ -1,0 +1,24 @@
+.cart-div table tr td img{
+    max-width: 100px;
+}
+
+.cart-title{
+    text-align: center;
+    font-size: xx-large;
+    margin-top: 10px;
+}
+
+.cart-div table tr td a{
+    text-decoration: none
+}
+
+.cart-checkout{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+    gap: 30px;
+}
+
+.cart-checkout button{
+    margin-right: 10px;
+}

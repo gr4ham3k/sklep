@@ -11,7 +11,16 @@ use Illuminate\Support\Facades\Auth;
         public function show()
         {
             $cart = Cart::with('items.product')->where('user_id',Auth::id())->first();
-            return view('pages.cart',compact('cart'));
+
+            $total = 0;
+            if($cart)
+            {
+                $total = $cart->items->sum(function($item){
+                    return $item->quantity * $item->product->price;
+                });
+            }
+
+            return view('pages.cart',compact('cart','total'));
         }
 
         public function add(Request $request)
@@ -38,6 +47,18 @@ use Illuminate\Support\Facades\Auth;
             }
 
             return back()->with('success', 'Dodano do koszyka!');
+        }
+
+        public function remove(CartItem $item)
+        {
+            if($item->cart->user_id != Auth::id())
+            {
+                abort(403);
+            }
+
+            $item->delete();
+
+            return back()->with('success','Produkt usunięty z koszyka!');
         }
     }
 ?>
