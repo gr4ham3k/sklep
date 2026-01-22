@@ -26,4 +26,5 @@ Route::post('/logout',function ()
 Route::get('/cart',[CartController::class,'show'])->middleware('auth');
 Route::post('/cart',[CartController::class,'add'])->middleware('auth');
 Route::delete('/cart/{item}',[CartController::class,'remove'])->middleware('auth')->name('cart.remove');
+Route::post('/order',[CartController::class,'store'])->middleware('auth');
 

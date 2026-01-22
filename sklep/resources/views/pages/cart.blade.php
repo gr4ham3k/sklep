@@ -5,7 +5,6 @@
         <span>KOSZYK</span>
     </div>
     <div class="cart-div">
-        <form action="" method="POST">
         <table style="width:100%">
             <thead>
                 <th></th>
@@ -24,7 +23,7 @@
                         <span>{{ $item->product->name }}</span>
                     </td>
                     <td style="width: 15%; text-align: center;">
-                        <span>{{ $item->quantity }}</span>
+                        <span><input type="number" value="{{ $item->quantity }}" min="1" max="{{ $item->product->stock_quantity }}"></span>
                     </td>
                     <td style="width: 5%; text-align: center;">
                         <span>{{ $item->product->price }} zł</span>
@@ -43,8 +42,10 @@
         <div class="cart-checkout">
             <span>Łącznie: {{ $total }} zł</span>
             <input type="hidden" value="{{ $total }}">
-            <button>ZAMÓW</button>
+            <form action="/order" method="POST">
+                @csrf
+                <button>ZAMÓW</button>
+            </form>
         </div>
-        </form>
     </div>
 @endsection

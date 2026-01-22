@@ -1,5 +1,5 @@
 <?php
-    namespace App\Http\Controllers;
+namespace App\Http\Controllers;
 
 use App\Models\Cart;
 use App\Models\CartItem;
@@ -18,6 +18,8 @@ use Illuminate\Support\Facades\Auth;
                 $total = $cart->items->sum(function($item){
                     return $item->quantity * $item->product->price;
                 });
+
+                $total = number_format($total,2,',',' ');
             }
 
             return view('pages.cart',compact('cart','total'));
@@ -60,5 +62,7 @@ use Illuminate\Support\Facades\Auth;
 
             return back()->with('success','Produkt usunięty z koszyka!');
         }
+
+        
     }
 ?>

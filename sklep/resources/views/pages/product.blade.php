@@ -19,7 +19,7 @@
                     <form method="POST" action="/cart">
                         @csrf
                         <input name="product_id" type="hidden" value="{{ $product->id }}">
-                        <input name="quantity" type="number" value="1" min="1" max="10">
+                        <input name="quantity" type="number" value="1" min="1" max="{{ $product->stock_quantity }}">
                         <button class="buy-btn">Dodaj do koszyka</button>
                     </form>
                 </div>
