@@ -8,6 +8,7 @@ class Order extends Model
 {
     protected $fillable = [
         'user_id',
+        'address_id',
         'total',
         'status',
     ];
@@ -20,6 +21,11 @@ class Order extends Model
     public function items()
     {
         return $this->hasMany(OrderItem::class);
+    }
+
+    public function address()
+    {
+        //to do
     }
 
     public function getTotalCalculatedAttribute()

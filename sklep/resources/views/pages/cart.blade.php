@@ -63,7 +63,8 @@
                 <input type="text" name="city" placeholder="Miasto">
                 <input type="text" name="street" placeholder="Ulica">
                 <input type="text" name="postcode" placeholder="Kod pocztowy">
-                <input type="text" name="apartment-number" placeholder="Numer mieszkania" optional>
+                <input type="text" name="telephone" placeholder="Telefon">
+                <input type="tel" name="apartment-number" placeholder="Numer mieszkania" optional>
                 <button>ZAMÓW</button>
             </form>
         </div>
