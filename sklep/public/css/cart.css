@@ -14,11 +14,27 @@
 
 .cart-checkout{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    
+}
+
+.cart-checkout form input{
+    display: block;
     margin-bottom: 10px;
     gap: 30px;
 }
 
 .cart-checkout button{
     margin-right: 10px;
+    margin-bottom: 20px;
 }
+
+.total-div{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#total{
+    font-weight: bolder;
+}
+

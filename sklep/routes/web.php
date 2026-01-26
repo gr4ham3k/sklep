@@ -4,6 +4,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\OrderController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -26,5 +27,7 @@ Route::post('/logout',function ()
 Route::get('/cart',[CartController::class,'show'])->middleware('auth');
 Route::post('/cart',[CartController::class,'add'])->middleware('auth');
 Route::delete('/cart/{item}',[CartController::class,'remove'])->middleware('auth')->name('cart.remove');
-Route::post('/order',[CartController::class,'store'])->middleware('auth');
+Route::patch('/cart/{item}',[CartController::class,'update'])->middleware('auth')->name('cart.update');
+
+Route::post('/order',[OrderController::class,'store'])->middleware('auth');
 

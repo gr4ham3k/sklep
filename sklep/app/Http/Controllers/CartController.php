@@ -63,6 +63,24 @@ use Illuminate\Support\Facades\Auth;
             return back()->with('success','Produkt usunięty z koszyka!');
         }
 
+        public function update(CartItem $item, Request $request)
+        {
+            if($item->cart->user_id != Auth::id())
+            {
+                abort(403);
+            }
+
+            $request->validate([
+                'quantity' => 'required|integer|min:1'
+            ]);
+
+            $item->update([
+                'quantity' => $request->quantity
+            ]);
+
+            return back();
+        }
+
         
     }
 ?>

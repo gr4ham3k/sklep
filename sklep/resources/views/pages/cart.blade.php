@@ -23,7 +23,20 @@
                         <span>{{ $item->product->name }}</span>
                     </td>
                     <td style="width: 15%; text-align: center;">
-                        <span><input type="number" value="{{ $item->quantity }}" min="1" max="{{ $item->product->stock_quantity }}"></span>
+                        <span>
+                            <form action="{{ route('cart.update', $item->id) }}" method="POST">
+                                @csrf
+                                @method('PATCH')
+                                <input
+                                    type="number"
+                                    name="quantity"
+                                    value="{{ $item->quantity }}" 
+                                    min="1" 
+                                    max="{{ $item->product->stock_quantity }}"
+                                    onchange="this.form.submit()"
+                                >
+                            </form>
+                        </span>
                     </td>
                     <td style="width: 5%; text-align: center;">
                         <span>{{ $item->product->price }} zł</span>
@@ -39,11 +52,18 @@
             @endforeach
             </tbody>
         </table>
+        <div class="total-div">
+            <span id="total">Łącznie: {{ $total }} zł</span>
+        </div>
         <div class="cart-checkout">
-            <span>Łącznie: {{ $total }} zł</span>
-            <input type="hidden" value="{{ $total }}">
             <form action="/order" method="POST">
                 @csrf
+                <input type="text" name="name" placeholder="Imię">
+                <input type="text" name="surnname" placeholder="Nazwisko">
+                <input type="text" name="city" placeholder="Miasto">
+                <input type="text" name="street" placeholder="Ulica">
+                <input type="text" name="postcode" placeholder="Kod pocztowy">
+                <input type="text" name="apartment-number" placeholder="Numer mieszkania" optional>
                 <button>ZAMÓW</button>
             </form>
         </div>

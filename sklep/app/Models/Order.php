@@ -21,4 +21,11 @@ class Order extends Model
     {
         return $this->hasMany(OrderItem::class);
     }
+
+    public function getTotalCalculatedAttribute()
+    {
+        return $this->items()->sum(function($item){
+            return $item->quantity * $item->price;
+        });
+    }
 }
