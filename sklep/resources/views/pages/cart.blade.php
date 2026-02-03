@@ -1,6 +1,11 @@
 @extends('layouts.layout')
 
 @section('content')
+
+@push('styles')
+    <link href="{{ asset('css/cart.css') }}" rel="stylesheet">
+@endpush
+
     <div class="cart-title">
         <span>KOSZYK</span>
     </div>
@@ -58,13 +63,14 @@
         <div class="cart-checkout">
             <form action="/order" method="POST">
                 @csrf
-                <input type="text" name="name" placeholder="Imię">
-                <input type="text" name="surnname" placeholder="Nazwisko">
-                <input type="text" name="city" placeholder="Miasto">
-                <input type="text" name="street" placeholder="Ulica">
-                <input type="text" name="postcode" placeholder="Kod pocztowy">
-                <input type="text" name="telephone" placeholder="Telefon">
-                <input type="tel" name="apartment-number" placeholder="Numer mieszkania" optional>
+                <input type="text" name="name" placeholder="Imię" required>
+                <input type="text" name="surname" placeholder="Nazwisko" required>
+                <input type="text" name="city" placeholder="Miasto" required>
+                <input type="text" name="street" placeholder="Ulica" required>
+                <input type="text" name="postcode" placeholder="Kod pocztowy" required>
+                <input type="tel" name="telephone" placeholder="Telefon" required>
+                <input type="text" name="house_number" placeholder="Numer domu" required>
+                <input type="text" name="apartment_number" placeholder="Numer mieszkania" optional>
                 <button>ZAMÓW</button>
             </form>
         </div>

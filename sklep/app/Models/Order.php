@@ -25,7 +25,7 @@ class Order extends Model
 
     public function address()
     {
-        //to do
+        return $this->belongsTo(Address::class);
     }
 
     public function getTotalCalculatedAttribute()

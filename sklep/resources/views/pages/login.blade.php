@@ -1,6 +1,11 @@
 @extends('layouts.layout')
 
 @section('content')
+
+@push('styles')
+    <link href="{{ asset('css/register.css') }}" rel="stylesheet">
+@endpush
+
     <div class="register-div">
         <div class="register-form">
             <p>LOGOWANIE</p>

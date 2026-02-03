@@ -6,10 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Strona główna</title>
     <link href="{{ asset('css/layout.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/content.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/product.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/register.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/cart.css') }}" rel="stylesheet">
+    @stack('styles')
 </head>
 <body>
     <div class="site">

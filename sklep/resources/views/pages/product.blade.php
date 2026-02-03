@@ -1,6 +1,11 @@
 @extends('layouts.layout')
 
 @section('content')
+
+@push('styles')
+    <link href="{{ asset('css/product.css') }}" rel="stylesheet">
+@endpush
+
     <div class="product">
         <div class="product-left">
             <p class="product-name">{{ $product->name }}lollollollollollollollollollollollollollollollollollollollol</p>

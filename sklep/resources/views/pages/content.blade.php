@@ -1,6 +1,10 @@
 @extends('layouts.layout')
 
 @section('content')
+
+@push('styles')
+    <link href="{{ asset('css/content.css') }}" rel="stylesheet">
+@endpush
         
 <div class="content">
     <div class="categories">
