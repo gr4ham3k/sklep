@@ -1,0 +1,10 @@
+.orders-title{
+    text-align: center;
+    font-size: xx-large;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.orders-table tr td{
+    text-align: center;
+}

@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('content')
-    <div class="user-panel">
+    <div>
         
     </div>
 @endsection

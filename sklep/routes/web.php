@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/',[ProductController::class,'showAll']);
-Route::get('/{category:slug}/{product:slug}',[ProductController::class,'showProduct']);
+Route::get('/products/{category:slug}/{product:slug}',[ProductController::class,'showProduct']);
 
 Route::get('/register',[RegisterController::class,'show']);
 Route::post('/register',[RegisterController::class,'register']);
@@ -36,4 +36,9 @@ Route::patch('/cart/{item}',[CartController::class,'update'])->middleware('auth'
 Route::post('/order',[OrderController::class,'store'])->middleware('auth');
 
 Route::get('/account',[UserPanelController::class,'show'])->middleware('auth');
+
+Route::get('/orders',[OrderController::class,'index'])->middleware('auth');
+Route::get('/orders/{order}', [OrderController::class,'show'])->middleware('auth');
+
+
 

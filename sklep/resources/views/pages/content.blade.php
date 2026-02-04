@@ -15,7 +15,7 @@
     </div>
     <div class="products">
         @foreach ($products as $product)
-        <a href="{{ '/'.$product->category->slug.'/'.$product->slug }}" class="single-product-link">
+        <a href="/products/{{ $product->category->slug.'/'.$product->slug }}" class="single-product-link">
             <div class="single-product">
                 @if ($product->image->isNotEmpty())
                     <img src="{{ asset('storage/'.$product->image->first()->image_path) }}" 

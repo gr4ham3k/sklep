@@ -11,6 +11,22 @@ use Illuminate\Support\Facades\DB;
 
 class OrderController extends Controller
 {
+
+    public function index()
+    {
+        $orders = Order::where('user_id',Auth::id())->latest()->get();
+
+        return view('pages.orders',compact('orders'));
+    }
+
+    public function show(Order $order)
+    {
+        
+        abort_if($order->user_id !== Auth::id(),403);
+
+        return view('pages.order-details',compact('order'));
+    }
+
     public function store(Request $request)
     {
         $request->validate([

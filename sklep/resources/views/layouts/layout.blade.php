@@ -20,6 +20,9 @@
                     @auth
                         <div class="my-account">
                             <a href="/account" class="header-link">Moje konto ({{ Auth::user()->username }})</a>
+                        </div>
+                        <div class="orders">
+                            <a href="/orders" class="header-link">Zamówienia</a>
                         </div> 
                         <div class="cart">
                             <a href="/cart" class="header-link">Koszyk</a>
