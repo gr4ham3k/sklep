@@ -1,0 +1,26 @@
+.order-details{
+    display: block;
+}
+
+.order-details img{
+    width: 25%;
+}
+
+table{
+    margin: 0 auto;
+}
+
+.order-details table tr td{
+    text-align: center;
+}
+
+.order-details-title{
+    text-align: center;
+    font-size: xx-large;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+td{
+    width: 20%;
+}

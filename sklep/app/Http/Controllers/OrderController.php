@@ -8,6 +8,7 @@ use App\Models\Address;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Cart;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Validation\ValidationException;
 
 class OrderController extends Controller
 {
@@ -75,11 +76,21 @@ class OrderController extends Controller
             ]);
 
             foreach ($cart->items as $item) {
+
+                if ($item->product->stock_quantity < $item->quantity) {
+                    throw ValidationException::withMessages([
+                        'quantity_'.$item->id => 'Brak wystarczającej ilości produktu: ' . $item->product->name,
+                    ]);
+                }
+
                 $order->items()->create([
                     'product_id' => $item->product_id,
                     'quantity' => $item->quantity,
                     'price' => $item->product->price,
                 ]);
+
+                $item->product->decrement('stock_quantity',$item->quantity);
+
             }
 
             $cart->items()->delete();

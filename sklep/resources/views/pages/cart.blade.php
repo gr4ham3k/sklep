@@ -40,6 +40,13 @@
                                     max="{{ $item->product->stock_quantity }}"
                                     onchange="this.form.submit()"
                                 >
+
+                                @error('quantity_'.$item->id)
+                                    <div style="color: red; font-size: 12px; margin-top: 4px;">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+
                             </form>
                         </span>
                     </td>

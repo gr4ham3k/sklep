@@ -15,7 +15,7 @@
             <thead>
                 <th>Numer zamówienia</th>
                 <th>Data</th>
-                <th>Cena</th>
+                <th>Łączna kwota</th>
                 <th>Status</th>
             </thead>
             <tbody>
@@ -24,7 +24,9 @@
                     <td>ZAM-{{ str_pad($order->id, 6, '0', STR_PAD_LEFT) }}</td>
                     <td>{{ $order->created_at->format('d.m.Y H:i') }}</td>
                     <td>{{ $order->total }}zł</td>
-                    <td>{{ $order->status }}</td>
+                    <td>
+                        {{ __('statuses.'.$order->status) }}
+                    </td>
                     <td>
                         <a href="/orders/{{ $order->id }}">
                             Szczegóły
