@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AdminProductController;
+use App\Http\Controllers\AdminCategoryController;
+use App\Http\Controllers\AdminUserController;
+use App\Http\Controllers\AdminOrderController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisterController;
@@ -45,9 +48,13 @@ Route::get('/orders/{order}', [OrderController::class,'show'])->middleware('auth
 Route::prefix('admin')->middleware(['auth','role.admin'])->group(function(){
     Route::get('/',[AdminController::class,'index']);
     Route::get('/products',[AdminProductController::class,'index'])->name('products.index');
-    Route::get('/categories',[AdminProductController::class,'index'])->name('categories.index');
-    Route::get('/users',[AdminProductController::class,'index'])->name('users.index');
-    Route::get('/orders',[AdminProductController::class,'index'])->name('orders.index');
+    Route::get('/products/{product}/edit',[AdminProductController::class,'edit'])->name('products.edit');
+    Route::put('/products/{product}',[AdminProductController::class,'update'])->name('products.update');
+
+    Route::get('/categories',[AdminCategoryController::class,'index'])->name('categories.index');
+    Route::get('/users',[AdminUserController::class,'index'])->name('users.index');
+    Route::get('/orders',[AdminOrderController::class,'index'])->name('orders.index');
+    
 });
 
 

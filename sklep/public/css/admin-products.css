@@ -1,0 +1,20 @@
+.admin-products table,td,th{
+    border: 1px solid black;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.admin-products table{
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.admin-products table td,th{
+    font-size: x-large;
+    padding: 10px;
+}
+
+.admin-products td img{
+    width: 60px;
+}

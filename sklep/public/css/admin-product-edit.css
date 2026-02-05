@@ -1,0 +1,11 @@
+.admin-product-edit{
+    display: flex;
+}
+
+.admin-product-edit form input{
+    display: block;
+}
+
+.admin-product-edit img{
+    width: 50%;
+}

@@ -1,5 +1,35 @@
 @extends('layouts.layout')
 
+@push('styles')
+    <link href="{{ asset('css/admin-products.css') }}" rel="stylesheet">
+@endpush
+
 @section('content')
-    
+    <div class="admin-products">
+        <table>
+            <thead>
+                <th></th>
+                <th>ID</th>
+                <th>NAZWA</th>
+                <th>CENA</th>
+                <th>ILOŚĆ</th>
+            </thead>
+            <tbody>
+            @foreach ($products as $product)
+                <tr>
+                    <td>
+                        <img src="{{ asset('storage/'.$product->image->first()->image_path) }}" alt="{{ $product->image->first()->alt_text }}">
+                    </td>
+                    <td>{{ $product->id }}</td>
+                    <td>{{ $product->name }}</td>
+                    <td>{{ $product->price }}zł</td>
+                    <td>{{ $product->stock_quantity }}</td>
+                    <td>
+                        <a href="{{ route('products.edit',$product->id) }}">Edytuj</a>
+                    </td>
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
+    </div>
 @endsection
