@@ -19,6 +19,7 @@
                 <th></th>
             </thead>
             <tbody>
+                @if ($cart && $cart->items->count())
                 @foreach ($cart->items as $item)
                 <tr>
                     <td>
@@ -62,6 +63,7 @@
                     </td>
                 </tr>
             @endforeach
+            @endif
             </tbody>
         </table>
         <div class="total-div">

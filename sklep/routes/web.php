@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AdminProductController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisterController;
@@ -39,6 +41,14 @@ Route::get('/account',[UserPanelController::class,'show'])->middleware('auth');
 
 Route::get('/orders',[OrderController::class,'index'])->middleware('auth');
 Route::get('/orders/{order}', [OrderController::class,'show'])->middleware('auth');
+
+Route::prefix('admin')->middleware(['auth','role.admin'])->group(function(){
+    Route::get('/',[AdminController::class,'index']);
+    Route::get('/products',[AdminProductController::class,'index'])->name('products.index');
+    Route::get('/categories',[AdminProductController::class,'index'])->name('categories.index');
+    Route::get('/users',[AdminProductController::class,'index'])->name('users.index');
+    Route::get('/orders',[AdminProductController::class,'index'])->name('orders.index');
+});
 
 
 

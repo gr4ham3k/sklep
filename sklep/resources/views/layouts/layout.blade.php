@@ -21,6 +21,12 @@
                         <div class="my-account">
                             <a href="/account" class="header-link">Moje konto ({{ Auth::user()->username }})</a>
                         </div>
+                        @if (Auth::user()->role === 'admin')
+                            <div class="admin">
+                                <a href="/admin" class="header-link">Panel admina </a>
+                            </div>
+                        @endif
+                        
                         <div class="orders">
                             <a href="/orders" class="header-link">Zamówienia</a>
                         </div> 
