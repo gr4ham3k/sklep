@@ -38,3 +38,7 @@
     font-weight: bolder;
 }
 
+.old-price{
+    text-decoration: line-through;
+}
+

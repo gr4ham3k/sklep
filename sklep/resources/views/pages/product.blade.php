@@ -17,7 +17,13 @@
             </div>
             <div class="d2">
                 <div class="d2-left">
-                    <span class="product-price"> {{ $product->price }} zł </span>
+                    @if ($product->isOnSale())
+                        <span class="product-old-price"> {{ $product->price }} zł </span>
+                        <span class="product-sale-price"> {{ $product->sale_price }} zł </span>
+                    @else
+                        <span class="product-price"> {{ $product->price }} zł </span>
+                    @endif
+                    
                 </div>
                 <div class="d2-right">
                     <span class="product-stock">{{ $product->stock_quantity }} sztuk</span>

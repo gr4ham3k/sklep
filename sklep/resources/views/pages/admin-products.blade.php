@@ -6,6 +6,11 @@
 
 @section('content')
     <div class="admin-products">
+        <a class="admin-add-product" href="#">
+            <div>
+                Dodaj produkt
+            </div>
+        </a>
         <table>
             <thead>
                 <th></th>
@@ -22,7 +27,7 @@
                     </td>
                     <td>{{ $product->id }}</td>
                     <td>{{ $product->name }}</td>
-                    <td>{{ $product->price }}zł</td>
+                    <td>{{ $product->finalPrice() }}zł</td>
                     <td>{{ $product->stock_quantity }}</td>
                     <td>
                         <a href="{{ route('products.edit',$product->id) }}">Edytuj</a>

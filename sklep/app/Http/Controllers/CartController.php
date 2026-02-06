@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Auth;
             if($cart)
             {
                 $total = $cart->items->sum(function($item){
-                    return $item->quantity * $item->product->price;
+                    return $item->quantity * $item->product->finalPrice();
                 });
 
                 $total = number_format($total,2,',',' ');

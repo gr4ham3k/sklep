@@ -2,7 +2,7 @@
     display: flex;
 }
 
-.admin-product-edit form input{
+.admin-product-edit form input, textarea{
     display: block;
 }
 

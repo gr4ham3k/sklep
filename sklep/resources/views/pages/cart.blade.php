@@ -52,7 +52,14 @@
                         </span>
                     </td>
                     <td style="width: 5%; text-align: center;">
-                        <span>{{ $item->product->price }} zł</span>
+                        @if ($item->product->isOnSale())
+                            <p>
+                                <span class="old-price">{{ $item->product->price }}zł</span>
+                                <span class="sale-price">{{ $item->product->sale_price }}zł</span>
+                            </p>
+                        @else
+                            <p>{{ $item->product->price }} zł</p>
+                        @endif
                     </td>
                     <td>
                         <form action="{{ route('cart.remove', $item->id) }}" method="POST">

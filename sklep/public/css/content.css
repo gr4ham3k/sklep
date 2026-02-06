@@ -41,3 +41,7 @@
     text-align: left;
     width: 300px;
 }
+
+.old-price{
+    text-decoration: line-through;
+}

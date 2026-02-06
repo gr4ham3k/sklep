@@ -12,7 +12,7 @@
     overflow-wrap: break-word;
 }
 
-.product-stock,.product-name,.product-price,.buy-btn,.d2-right input{
+.product-stock,.product-name,.product-price,.buy-btn,.product-old-price,.product-sale-price,.d2-right input{
     font-size: clamp(20px,2vw,40px)
 }
 
@@ -39,4 +39,8 @@
 
 .d2-right input{
     margin-left: 25px;
+}
+
+.product-old-price{
+    text-decoration: line-through;
 }

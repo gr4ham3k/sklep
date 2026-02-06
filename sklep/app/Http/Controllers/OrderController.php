@@ -65,7 +65,7 @@ class OrderController extends Controller
 
 
             $total = $cart->items->sum(function ($item) {
-                return $item->quantity * $item->product->price;
+                return $item->quantity * $item->product->finalPrice();
             });
 
             $order = Order::create([
@@ -86,7 +86,7 @@ class OrderController extends Controller
                 $order->items()->create([
                     'product_id' => $item->product_id,
                     'quantity' => $item->quantity,
-                    'price' => $item->product->price,
+                    'price' => $item->product->finalPrice(),
                 ]);
 
                 $item->product->decrement('stock_quantity',$item->quantity);

@@ -30,7 +30,7 @@
 
                     <td>{{ $item->quantity }}</td>
 
-                    <td>{{ $item->product->price }}zł</td>
+                    <td>{{ $item->product->finalPrice() }}zł</td>
 
                 </tr>
                 @endforeach

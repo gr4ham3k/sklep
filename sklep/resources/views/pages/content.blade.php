@@ -21,8 +21,16 @@
                     <img src="{{ asset('storage/'.$product->image->first()->image_path) }}" 
                     alt="{{ $product->image->first()->alt_text }}">
                 @endif
+                @if ($product->isOnSale())
+                    <p>
+                        <span class="old-price">{{ $product->price }}zł</span>
+                        <span class="sale-price">{{ $product->sale_price }}zł</span>
+                    </p>
+                @else
+                    <p>{{ $product->price }} zł</p>
+                @endif
                 <p>{{ $product->name }}</p>
-                <p>{{ $product->price }} zł</p>
+                
             </div>
         </a>     
         @endforeach
