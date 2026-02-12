@@ -22,9 +22,12 @@
             <tbody>
             @foreach ($products as $product)
                 <tr>
-                    <td>
-                        <img src="{{ asset('storage/'.$product->image->first()->image_path) }}" alt="{{ $product->image->first()->alt_text }}">
-                    </td>
+                    @if ($product->image->isNotEmpty())
+                        <td>
+                            <img src="{{ asset('storage/'.$product->image->first()->image_path) }}" alt="{{ $product->image->first()->alt_text }}">
+                        </td>
+                    @endif
+                    
                     <td>{{ $product->id }}</td>
                     <td>{{ $product->name }}</td>
                     <td>{{ $product->finalPrice() }}zł</td>

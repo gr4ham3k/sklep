@@ -18,6 +18,7 @@ class Product extends Model
         'sale_start',
         'sale_end',
         'stock_quantity',
+        'category_id',
     ];
 
     protected $casts = [

@@ -1,0 +1,14 @@
+.admin-products-add h2{
+    text-align: center;
+}
+
+.admin-products-add form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-products-add, form, input, textarea,select{
+    display: block;
+}
+
