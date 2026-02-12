@@ -28,10 +28,10 @@
             <input type="number" step="0.01" value="{{ $product->sale_price }}" name="sale_price">
             
             <label for="sale_start">Początek promocji<label>
-            <input type="date" value="{{ $product->sale_start }}" name="sale_start">
+            <input type="datetime-local" value="{{ $product->sale_start }}" name="sale_start">
             
             <label for="sale_end">Koniec promocji<label>
-            <input type="date" value="{{ $product->sale_end }}" name="sale_end">
+            <input type="datetime-local" value="{{ $product->sale_end }}" name="sale_end">
             
             <label for="stock_quantity">Ilość<label>
             <input type="number" value="{{ $product->stock_quantity }}" name="stock_quantity">

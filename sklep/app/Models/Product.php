@@ -20,6 +20,12 @@ class Product extends Model
         'stock_quantity',
     ];
 
+    protected $casts = [
+        'sale_start' => 'datetime',
+        'sale_end' => 'datetime',
+    ];
+
+
     public function category()
     {
         return $this->belongsTo(Category::class);

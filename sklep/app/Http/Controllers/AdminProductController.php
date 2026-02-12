@@ -21,7 +21,7 @@ class AdminProductController extends Controller
         return view('pages.admin-edit-product',compact('product'));
     }
 
-    public function update(Product $product,Request $request)
+    public function update(Request $request,Product $product)
     {
         $request->validate([
             'name' => 'required|string|min:1',
@@ -29,8 +29,8 @@ class AdminProductController extends Controller
             'description' => 'required|string|min:1',
             'price' => 'required|regex:/^\d+(\.\d{1,2})?$/',
             'sale_price' => 'nullable|regex:/^\d+(\.\d{1,2})?$/',
-            'sale_start' => 'nullable|date|required_with:sale_end',
-            'sale_end' => 'nullable|date|after_or_equal:sale_start|required_with:sale_start',
+            'sale_start' => 'nullable|date',
+            'sale_end' => 'nullable|date|after_or_equal:sale_start',
             'stock_quantity' => 'required|numeric|min:0',
 
         ]);
