@@ -9,7 +9,7 @@
     <div class="product">
         <div class="product-left">
             <p class="product-name">{{ $product->name }}lollollollollollollollollollollollollollollollollollollollol</p>
-            <img src="{{ asset('storage/'.$product->image->first()->image_path) }}" alt="{{ $product->image->first()->alt_text }}">
+            <img src="{{ asset('storage/'.$product->image->image_path) }}" alt="{{ $product->image->alt_text }}">
         </div>
         <div class="product-right">
             <div class="d1">

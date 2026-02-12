@@ -56,7 +56,7 @@ Route::prefix('admin')->middleware(['auth','role.admin'])->group(function(){
 
 
     Route::get('/categories',[AdminCategoryController::class,'index'])->name('categories.index');
-    Route::get('/users',[AdminUserController::class,'index'])->name('users.index');
+    Route::post('/categories',[AdminCategoryController::class,'insert'])->name('categories.insert');
     Route::get('/orders',[AdminOrderController::class,'index'])->name('orders.index');
     
 });

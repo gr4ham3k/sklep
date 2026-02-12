@@ -12,9 +12,6 @@
         <a href="{{ route('categories.index') }}">
             Kategorie
         </a>
-        <a href="{{ route('users.index') }}">
-            Użytkownicy
-        </a>
         <a href="{{ route('orders.index') }}">
             Zamówienia
         </a>

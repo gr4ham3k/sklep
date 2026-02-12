@@ -6,10 +6,10 @@
 
 @section('content')
     <div class="admin-product-edit">
-        @if($product->image->isNotEmpty())
-            <img src="{{ asset('storage/'.$product->image->first()->image_path) }}" alt="{{ $product->image->first()->alt_text }}">
+        @if($product->image)
+            <img src="{{ asset('storage/'.$product->image->image_path) }}" alt="{{ $product->image->alt_text }}">
         @endif
-        <form id="edit-product-form" action="{{ route('products.update',$product) }}" method="POST">
+        <form id="edit-product-form" action="{{ route('products.update',$product) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             <label for="name">Nazwa<label>
@@ -35,6 +35,19 @@
             
             <label for="stock_quantity">Ilość<label>
             <input type="number" value="{{ $product->stock_quantity }}" name="stock_quantity">
+
+            <label for="image">Dodaj zdjęcie<label>
+            <input type="file" name="image">
+
+            <label for="category_id">Kategoria<label>
+            <select name="category_id">
+                @foreach ($categories as $category)
+                    <option value="{{ $category->id }}"
+                        {{ old('category_id', $product->category_id) == $category->id ? 'selected' : '' }}>
+                        {{ $category->name }}</option>
+                @endforeach
+            </select>
+            
         </form>
         <div class="edit-product-btns">
             <button type="submit" form="edit-product-form">Zapisz zmiany</button>

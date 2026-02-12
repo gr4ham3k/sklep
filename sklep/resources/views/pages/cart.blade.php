@@ -23,7 +23,7 @@
                 @foreach ($cart->items as $item)
                 <tr>
                     <td>
-                        <img src="{{ asset('storage/'.$item->product->image->first()->image_path) }}" alt="{{ $item->product->image->first()->alt_text }}">
+                        <img src="{{ asset('storage/'.$item->product->image->image_path) }}" alt="{{ $item->product->image->alt_text }}">
                     </td>
                     <td style="width: 70%; padding-left: 20px;">
                         <span>{{ $item->product->name }}</span>

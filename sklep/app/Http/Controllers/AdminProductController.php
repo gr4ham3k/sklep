@@ -18,8 +18,9 @@ class AdminProductController extends Controller
     }
 
     public function edit(Product $product)
-    {
-        return view('pages.admin-edit-product',compact('product'));
+    {   
+        $categories = Category::all();
+        return view('pages.admin-edit-product',compact('product','categories'));
     }
 
     public function add()
@@ -40,7 +41,7 @@ class AdminProductController extends Controller
             'sale_end' => 'nullable|date|after_or_equal:sale_start',
             'stock_quantity' => 'required|numeric|min:0',
             'category_id' => 'required',
-            'image' => 'required',
+            'image' => 'required|image|mimes:jpg,jpeg,png|max:2048',
 
         ]);
 
@@ -83,7 +84,9 @@ class AdminProductController extends Controller
             'sale_start' => 'nullable|date',
             'sale_end' => 'nullable|date|after_or_equal:sale_start',
             'stock_quantity' => 'required|numeric|min:0',
-
+            'category_id' => 'required',
+            'image' => 'image|mimes:jpg,jpeg,png|max:2048',
+            
         ]);
 
         $product->update([
@@ -95,7 +98,21 @@ class AdminProductController extends Controller
             'sale_start' => $request->sale_start,
             'sale_end' => $request->sale_end,
             'stock_quantity' => $request->stock_quantity,
+            'category_id' => $request->category_id,
         ]);
+
+        if($request->hasFile('image'))
+        {
+            $file = $request->file('image');
+            $filename = time().'_'.$file->getClientOriginalName();
+            $path = $file->storeAs('products',$filename,'public');
+
+            $product_image = $product->image->update([
+                'product_id' => $product->id,
+                'image_path' => $path,
+                'alt_text' => $filename,
+            ]);
+        }
 
         return back();
     }

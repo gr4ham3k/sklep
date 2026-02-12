@@ -22,9 +22,9 @@
             <tbody>
             @foreach ($products as $product)
                 <tr>
-                    @if ($product->image->isNotEmpty())
+                    @if ($product->image)
                         <td>
-                            <img src="{{ asset('storage/'.$product->image->first()->image_path) }}" alt="{{ $product->image->first()->alt_text }}">
+                            <img src="{{ asset('storage/'.$product->image->image_path) }}" alt="{{ $product->image->alt_text }}">
                         </td>
                     @endif
                     

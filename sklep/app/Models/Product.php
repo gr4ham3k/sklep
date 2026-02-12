@@ -34,7 +34,7 @@ class Product extends Model
 
     public function image()
     {
-        return $this->hasMany(Product_image::class);
+        return $this->hasOne(Product_image::class);
     }
 
     public function isOnSale(): bool

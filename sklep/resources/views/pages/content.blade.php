@@ -17,9 +17,9 @@
         @foreach ($products as $product)
         <a href="/products/{{ $product->category->slug.'/'.$product->slug }}" class="single-product-link">
             <div class="single-product">
-                @if ($product->image->isNotEmpty())
-                    <img src="{{ asset('storage/'.$product->image->first()->image_path) }}" 
-                    alt="{{ $product->image->first()->alt_text }}">
+                @if ($product->image)
+                    <img src="{{ asset('storage/'.$product->image->image_path) }}" 
+                    alt="{{ $product->image->alt_text }}">
                 @endif
                 @if ($product->isOnSale())
                     <p>
