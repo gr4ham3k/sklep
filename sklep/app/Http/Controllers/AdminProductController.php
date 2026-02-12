@@ -21,6 +21,11 @@ class AdminProductController extends Controller
         return view('pages.admin-edit-product',compact('product'));
     }
 
+    public function add()
+    {
+        return view('pages.admin-products-add');
+    }
+
     public function update(Request $request,Product $product)
     {
         $request->validate([

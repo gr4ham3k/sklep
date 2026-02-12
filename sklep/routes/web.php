@@ -48,6 +48,7 @@ Route::get('/orders/{order}', [OrderController::class,'show'])->middleware('auth
 Route::prefix('admin')->middleware(['auth','role.admin'])->group(function(){
     Route::get('/',[AdminController::class,'index']);
     Route::get('/products',[AdminProductController::class,'index'])->name('products.index');
+    Route::get('/products/add',[AdminProductController::class,'add'])->name('products.add');
     Route::get('/products/{product}/edit',[AdminProductController::class,'edit'])->name('products.edit');
     Route::delete('/products/{product}',[AdminProductController::class,'remove'])->name('products.remove');
     Route::put('/products/{product}',[AdminProductController::class,'update'])->name('products.update');

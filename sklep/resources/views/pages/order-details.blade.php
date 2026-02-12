@@ -22,8 +22,10 @@
                 @foreach ($order->items as $item)
                 <tr>
                     <td>
+                        @if ($item->product && $item->product->image->isNotEmpty())
                         <img src="{{ asset('storage/'.$item->product->image->first()->image_path) }}"
                             alt="{{ $item->product->image->first()->alt_text }}">
+                        @endif
                     </td>
 
                     <td>{{ $item->product->name }}</td>
