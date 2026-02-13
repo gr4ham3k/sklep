@@ -1,11 +1,10 @@
 @extends('layouts.layout')
 
-@section('content')
-
 @push('styles')
     <link href="{{ asset('css/register.css') }}" rel="stylesheet">
 @endpush
 
+@section('content')
     <div class="register-div">
         <div class="register-form">
             <p>LOGOWANIE</p>
@@ -23,7 +22,14 @@
                     @endforeach
                 </ul>
             </div>
-        @endif  
+            @endif  
+            <div class="forgot-password">
+                @if (Route::has('password.request'))
+                    <a href="{{ route('password.request') }}">
+                        Nie pamiętasz hasła?
+                    </a>
+                @endif
+            </div>
         </div>
     </div>
 @endsection

@@ -1,0 +1,11 @@
+.user-panel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-panel form input{
+    display: block;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,48 @@
+Date : 2026-02-13 18:49:55
+Directory : c:\Users\jakub\Desktop\sklep\sklep\public
+Total : 19 files,  512 codes, 4 comments, 114 blanks, all 630 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| PostCSS  |         17 |        427 |          0 |        106 |        533 |
+| XML      |          1 |         75 |          0 |          1 |         76 |
+| PHP      |          1 |         10 |          4 |          7 |         21 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                    | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                       |         19 |        512 |          4 |        114 |        630 |
+| . (Files)                                                               |          1 |         10 |          4 |          7 |         21 |
+| css                                                                     |         17 |        427 |          0 |        106 |        533 |
+| images                                                                  |          1 |         75 |          0 |          1 |         76 |
++-------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                | language | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| c:\Users\jakub\Desktop\sklep\sklep\public\css\admin-categories-edit.css | PostCSS  |          9 |          0 |          4 |         13 |
+| c:\Users\jakub\Desktop\sklep\sklep\public\css\admin-categories.css      | PostCSS  |         20 |          0 |          7 |         27 |
+| c:\Users\jakub\Desktop\sklep\sklep\public\css\admin-order-details.css   | PostCSS  |         18 |          0 |          6 |         24 |
+| c:\Users\jakub\Desktop\sklep\sklep\public\css\admin-orders.css          | PostCSS  |         27 |          0 |          7 |         34 |
+| c:\Users\jakub\Desktop\sklep\sklep\public\css\admin-panel.css           | PostCSS  |         19 |          0 |          2 |         21 |
+| c:\Users\jakub\Desktop\sklep\sklep\public\css\admin-product-edit.css    | PostCSS  |          9 |          0 |          2 |         11 |
+| c:\Users\jakub\Desktop\sklep\sklep\public\css\admin-products-add.css    | PostCSS  |         11 |          0 |          4 |         15 |
+| c:\Users\jakub\Desktop\sklep\sklep\public\css\admin-products.css        | PostCSS  |         35 |          0 |          7 |         42 |
+| c:\Users\jakub\Desktop\sklep\sklep\public\css\cart.css                  | PostCSS  |         34 |          0 |         11 |         45 |
+| c:\Users\jakub\Desktop\sklep\sklep\public\css\content.css               | PostCSS  |         43 |          0 |         10 |         53 |
+| c:\Users\jakub\Desktop\sklep\sklep\public\css\forgot-password.css       | PostCSS  |          4 |          0 |          2 |          6 |
+| c:\Users\jakub\Desktop\sklep\sklep\public\css\layout.css                | PostCSS  |         66 |          0 |         18 |         84 |
+| c:\Users\jakub\Desktop\sklep\sklep\public\css\order-details.css         | PostCSS  |         21 |          0 |          5 |         26 |
+| c:\Users\jakub\Desktop\sklep\sklep\public\css\orders.css                | PostCSS  |          9 |          0 |          1 |         10 |
+| c:\Users\jakub\Desktop\sklep\sklep\public\css\product.css               | PostCSS  |         36 |          0 |         10 |         46 |
+| c:\Users\jakub\Desktop\sklep\sklep\public\css\register.css              | PostCSS  |         56 |          0 |          9 |         65 |
+| c:\Users\jakub\Desktop\sklep\sklep\public\css\user-panel.css            | PostCSS  |         10 |          0 |          1 |         11 |
+| c:\Users\jakub\Desktop\sklep\sklep\public\images\LOGO.svg               | XML      |         75 |          0 |          1 |         76 |
+| c:\Users\jakub\Desktop\sklep\sklep\public\index.php                     | PHP      |         10 |          4 |          7 |         21 |
+| Total                                                                   |          |        512 |          4 |        114 |        630 |
++-------------------------------------------------------------------------+----------+------------+------------+------------+------------+

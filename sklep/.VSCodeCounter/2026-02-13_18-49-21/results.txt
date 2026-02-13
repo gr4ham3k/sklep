@@ -1,0 +1,71 @@
+Date : 2026-02-13 18:49:21
+Directory : c:\Users\jakub\Desktop\sklep\sklep\app
+Total : 35 files,  1057 codes, 132 comments, 294 blanks, all 1483 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| PHP      |         35 |      1,057 |        132 |        294 |      1,483 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++----------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                     | files      | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                        |         35 |      1,057 |        132 |        294 |      1,483 |
+| Http                                                                                                     |         23 |        795 |        101 |        218 |      1,114 |
+| Http\Controllers                                                                                         |         20 |        705 |         70 |        195 |        970 |
+| Http\Controllers (Files)                                                                                 |         11 |        476 |         10 |        131 |        617 |
+| Http\Controllers\Auth                                                                                    |          9 |        229 |         60 |         64 |        353 |
+| Http\Middleware                                                                                          |          1 |         17 |          5 |          5 |         27 |
+| Http\Requests                                                                                            |          2 |         73 |         26 |         18 |        117 |
+| Http\Requests (Files)                                                                                    |          1 |         22 |          5 |          4 |         31 |
+| Http\Requests\Auth                                                                                       |          1 |         51 |         21 |         14 |         86 |
+| Models                                                                                                   |          9 |        228 |         17 |         63 |        308 |
+| Providers                                                                                                |          1 |         12 |          8 |          5 |         25 |
+| View                                                                                                     |          2 |         22 |          6 |          8 |         36 |
+| View\Components                                                                                          |          2 |         22 |          6 |          8 |         36 |
++----------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++----------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                                                 | language | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| c:\Users\jakub\Desktop\sklep\sklep\app\Http\Controllers\AddressController.php                            | PHP      |         31 |          0 |          6 |         37 |
+| c:\Users\jakub\Desktop\sklep\sklep\app\Http\Controllers\AdminCategoryController.php                      | PHP      |         49 |          0 |         14 |         63 |
+| c:\Users\jakub\Desktop\sklep\sklep\app\Http\Controllers\AdminController.php                              | PHP      |         10 |          0 |          4 |         14 |
+| c:\Users\jakub\Desktop\sklep\sklep\app\Http\Controllers\AdminOrderController.php                         | PHP      |         26 |          0 |          9 |         35 |
+| c:\Users\jakub\Desktop\sklep\sklep\app\Http\Controllers\AdminProductController.php                       | PHP      |        106 |          0 |         21 |        127 |
+| c:\Users\jakub\Desktop\sklep\sklep\app\Http\Controllers\Auth\AuthenticatedSessionController.php          | PHP      |         28 |          9 |         11 |         48 |
+| c:\Users\jakub\Desktop\sklep\sklep\app\Http\Controllers\Auth\ConfirmablePasswordController.php           | PHP      |         28 |          6 |          7 |         41 |
+| c:\Users\jakub\Desktop\sklep\sklep\app\Http\Controllers\Auth\EmailVerificationNotificationController.php | PHP      |         16 |          3 |          6 |         25 |
+| c:\Users\jakub\Desktop\sklep\sklep\app\Http\Controllers\Auth\EmailVerificationPromptController.php       | PHP      |         15 |          3 |          4 |         22 |
+| c:\Users\jakub\Desktop\sklep\sklep\app\Http\Controllers\Auth\NewPasswordController.php                   | PHP      |         41 |         14 |          8 |         63 |
+| c:\Users\jakub\Desktop\sklep\sklep\app\Http\Controllers\Auth\PasswordController.php                      | PHP      |         21 |          3 |          6 |         30 |
+| c:\Users\jakub\Desktop\sklep\sklep\app\Http\Controllers\Auth\PasswordResetLinkController.php             | PHP      |         27 |         11 |          7 |         45 |
+| c:\Users\jakub\Desktop\sklep\sklep\app\Http\Controllers\Auth\RegisteredUserController.php                | PHP      |         34 |          8 |          9 |         51 |
+| c:\Users\jakub\Desktop\sklep\sklep\app\Http\Controllers\Auth\VerifyEmailController.php                   | PHP      |         19 |          3 |          6 |         28 |
+| c:\Users\jakub\Desktop\sklep\sklep\app\Http\Controllers\CartController.php                               | PHP      |         68 |          0 |         18 |         86 |
+| c:\Users\jakub\Desktop\sklep\sklep\app\Http\Controllers\Controller.php                                   | PHP      |          5 |          1 |          3 |          9 |
+| c:\Users\jakub\Desktop\sklep\sklep\app\Http\Controllers\OrderController.php                              | PHP      |         78 |          0 |         24 |        102 |
+| c:\Users\jakub\Desktop\sklep\sklep\app\Http\Controllers\ProductController.php                            | PHP      |         26 |          0 |          7 |         33 |
+| c:\Users\jakub\Desktop\sklep\sklep\app\Http\Controllers\ProfileController.php                            | PHP      |         38 |          9 |         14 |         61 |
+| c:\Users\jakub\Desktop\sklep\sklep\app\Http\Controllers\UserPanelController.php                          | PHP      |         39 |          0 |         11 |         50 |
+| c:\Users\jakub\Desktop\sklep\sklep\app\Http\Middleware\RoleAdmin.php                                     | PHP      |         17 |          5 |          5 |         27 |
+| c:\Users\jakub\Desktop\sklep\sklep\app\Http\Requests\Auth\LoginRequest.php                               | PHP      |         51 |         21 |         14 |         86 |
+| c:\Users\jakub\Desktop\sklep\sklep\app\Http\Requests\ProfileUpdateRequest.php                            | PHP      |         22 |          5 |          4 |         31 |
+| c:\Users\jakub\Desktop\sklep\sklep\app\Models\Address.php                                                | PHP      |         25 |          0 |          6 |         31 |
+| c:\Users\jakub\Desktop\sklep\sklep\app\Models\Cart.php                                                   | PHP      |         17 |          0 |          6 |         23 |
+| c:\Users\jakub\Desktop\sklep\sklep\app\Models\CartItem.php                                               | PHP      |         19 |          0 |          6 |         25 |
+| c:\Users\jakub\Desktop\sklep\sklep\app\Models\Category.php                                               | PHP      |         15 |          0 |          5 |         20 |
+| c:\Users\jakub\Desktop\sklep\sklep\app\Models\Order.php                                                  | PHP      |         30 |          0 |          8 |         38 |
+| c:\Users\jakub\Desktop\sklep\sklep\app\Models\OrderItem.php                                              | PHP      |         23 |          0 |          6 |         29 |
+| c:\Users\jakub\Desktop\sklep\sklep\app\Models\Product.php                                                | PHP      |         53 |          0 |         14 |         67 |
+| c:\Users\jakub\Desktop\sklep\sklep\app\Models\Product_image.php                                          | PHP      |         16 |          0 |          4 |         20 |
+| c:\Users\jakub\Desktop\sklep\sklep\app\Models\User.php                                                   | PHP      |         30 |         17 |          8 |         55 |
+| c:\Users\jakub\Desktop\sklep\sklep\app\Providers\AppServiceProvider.php                                  | PHP      |         12 |          8 |          5 |         25 |
+| c:\Users\jakub\Desktop\sklep\sklep\app\View\Components\AppLayout.php                                     | PHP      |         11 |          3 |          4 |         18 |
+| c:\Users\jakub\Desktop\sklep\sklep\app\View\Components\GuestLayout.php                                   | PHP      |         11 |          3 |          4 |         18 |
+| Total                                                                                                    |          |      1,057 |        132 |        294 |      1,483 |
++----------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
