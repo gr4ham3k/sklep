@@ -1,0 +1,12 @@
+.admin-categories-edit{
+    text-align: center;
+}
+
+.admin-categories-edit form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+

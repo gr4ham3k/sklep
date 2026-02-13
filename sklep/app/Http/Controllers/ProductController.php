@@ -20,6 +20,14 @@
             return view('pages.product',compact('product'));
             
         }
+
+        public function showAllByCategory($slug)
+        {
+            $category = Category::where('slug',$slug)->firstOrFail();
+            $products = $category->product()->get();   
+            $categories = Category::all();
+            return view('pages.content',compact('products','categories'));
+        }
     }
 
 ?>

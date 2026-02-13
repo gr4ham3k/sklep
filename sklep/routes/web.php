@@ -16,7 +16,9 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/',[ProductController::class,'showAll']);
+Route::get('/category/{category:slug}',[ProductController::class,'showAllByCategory']);
 Route::get('/products/{category:slug}/{product:slug}',[ProductController::class,'showProduct']);
+
 
 Route::get('/register',[RegisterController::class,'show']);
 Route::post('/register',[RegisterController::class,'register']);
@@ -57,7 +59,13 @@ Route::prefix('admin')->middleware(['auth','role.admin'])->group(function(){
 
     Route::get('/categories',[AdminCategoryController::class,'index'])->name('categories.index');
     Route::post('/categories',[AdminCategoryController::class,'insert'])->name('categories.insert');
+    Route::delete('categories/{category}',[AdminCategoryController::class,'remove'])->name('categories.remove');
+    Route::get('categories/{category}/edit',[AdminCategoryController::class,'edit'])->name('categories.edit');
+    Route::put('categories/{category}',[AdminCategoryController::class,'update'])->name('categories.update');
+
     Route::get('/orders',[AdminOrderController::class,'index'])->name('orders.index');
+    Route::get('/orders/{order}',[AdminOrderController::class,'show'])->name('order.show');
+    Route::put('/orders/{order}',[AdminOrderController::class,'updateStatus'])->name('order.updateStatus');
     
 });
 

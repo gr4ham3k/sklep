@@ -6,6 +6,7 @@
 
 @section('content')
     <div class="admin-products">
+        <h2>Produkty</h2>
         <a class="admin-add-product" href="{{ route('products.add') }}">
             <div>
                 Dodaj produkt

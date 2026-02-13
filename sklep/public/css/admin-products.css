@@ -5,6 +5,10 @@
     border-collapse: collapse;
 }
 
+.admin-products h2{
+    text-align: center;
+}
+
 .admin-products table{
     margin: 0 auto;
     margin-top: 10px;

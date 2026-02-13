@@ -12,6 +12,12 @@
 
 }
 
+.categories a {
+    display: flex;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
 .single-product{
     background-color: rgb(255, 26, 26);
     margin-top: 20px;

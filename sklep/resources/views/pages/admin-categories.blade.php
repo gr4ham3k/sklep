@@ -6,6 +6,11 @@
 
 @section('content')
     <div class="admin-categories">
+        @if (session('error'))
+            <div class="alert-error">
+                {{ session('error') }}
+            </div>
+        @endif
         <h2>Kategorie</h2>
         <form action="{{ route('categories.insert') }}" method="POST">
             @csrf
@@ -29,8 +34,16 @@
                 <tr>
                     <td>{{ $category->name }}</td>
                     <td>{{ $category->slug }}</td>
-                    <td><a href="#">Edytuj</a></td>
-                    <td><a href="#">Usuń</a></td>
+                    <td>
+                        <a href="{{ route('categories.edit',$category) }}">Edytuj</a>
+                    </td>
+                    <td>
+                        <form action="{{ route('categories.remove',$category) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit">Usuń</button>
+                        </form>
+                    </td>
                 </tr>
             @endforeach
             </tbody>

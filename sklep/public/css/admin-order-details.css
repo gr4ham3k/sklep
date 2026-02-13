@@ -1,0 +1,23 @@
+.admin-order-details h2{
+    text-align: center;
+}
+
+.admin-order-details table{
+    margin: 0 auto;
+    text-align: center;
+    
+}
+
+.admin-order-details table, tr,td,th{
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+td{
+    width: 25%;
+}
+
+.admin-order-details img{
+    width: 25%;
+}

@@ -9,8 +9,9 @@
 <div class="content">
     <div class="categories">
         <p>Kategorie produktów</p>
+        <a href="/">Pokaż wszystko</a>
         @foreach ($categories as $category)
-            <p>{{ $category->name }}</p>
+            <a href="/category/{{ $category->slug }}">{{ $category->name }}</a>
         @endforeach
     </div>
     <div class="products">
