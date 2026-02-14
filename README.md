@@ -19,7 +19,7 @@ To jest prosty sklep internetowy stworzony w Laravel z wykorzystaniem bazy danyc
 1. Sklonuj repozytorium:
    git clone <TWÓJ_LINK_DO_REPO>
    cd <Nazwa_Folderu_Projektu>
-
+   
 2. Zainstaluj zależności PHP:
    composer install
 
