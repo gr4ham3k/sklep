@@ -2,8 +2,6 @@
 
 # Projekt Sklep Laravel
 ![Strona główna](photos/img1.png)
-To jest prosty sklep internetowy stworzony w Laravel z wykorzystaniem bazy danych PostgreSQL. Projekt zawiera system użytkowników, koszyk, zamówienia, płatności i wysyłki.
-
 ---
 
 ## Wymagania
