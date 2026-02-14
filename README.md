@@ -19,10 +19,10 @@ To jest prosty sklep internetowy stworzony w Laravel z wykorzystaniem bazy danyc
 1. Sklonuj repozytorium:
    git clone https://github.com/gr4ham3k/sklep.git
    
-2. Zainstaluj zależności PHP:
+1. Zainstaluj zależności PHP:
    composer install i npm install
 
-3. Skopiuj plik .env.example do .env i ustaw dane do bazy danych PostgreSQL:
+1. Skopiuj plik .env.example do .env i ustaw dane do bazy danych PostgreSQL:
    DB_CONNECTION=pgsql
    DB_HOST=127.0.0.1
    DB_PORT=5432
@@ -31,18 +31,18 @@ To jest prosty sklep internetowy stworzony w Laravel z wykorzystaniem bazy danyc
    DB_PASSWORD=twoje_haslo
    oraz SESSION_DRIVER=file
 
-5. Utwórz bazę danych w PostgreSQL:
+1. Utwórz bazę danych w PostgreSQL:
    CREATE DATABASE twoja_baza;
    
-6. Zaimportuj plik SQL do bazy danych.
-7. Wygeneruj klucz aplikacji Laravel:
+1. Zaimportuj plik SQL do bazy danych.
+1. Wygeneruj klucz aplikacji Laravel:
    php artisan key:generate
 
-8. Poprawne wyświetlanie zdjęć:
+1. Poprawne wyświetlanie zdjęć:
    php artisan storage:link
 
-10. Uruchom serwer deweloperski:
+1. Uruchom serwer deweloperski:
    php artisan serve
    
-11. Aplikacja powinna być dostępna pod adresem: http://127.0.0.1:8000
+1. Aplikacja powinna być dostępna pod adresem: http://127.0.0.1:8000
 
