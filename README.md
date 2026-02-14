@@ -20,7 +20,7 @@ To jest prosty sklep internetowy stworzony w Laravel z wykorzystaniem bazy danyc
    git clone https://github.com/gr4ham3k/sklep.git
    
 2. Zainstaluj zależności PHP:
-   composer install
+   composer install i npm install
 
 3. Skopiuj plik .env.example do .env i ustaw dane do bazy danych PostgreSQL:
    DB_CONNECTION=pgsql
