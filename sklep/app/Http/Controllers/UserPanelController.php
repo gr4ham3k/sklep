@@ -24,7 +24,7 @@ class UserPanelController extends Controller
         $user=Auth::user();
         $user->username = $request->username;
         $user->save();
-        return back()->with('Success','Nazwa użytkownika została zmieniona!');
+        return back()->with('success','Nazwa użytkownika została zmieniona!');
     }
 
     public function changePassword(Request $request)
@@ -38,12 +38,12 @@ class UserPanelController extends Controller
 
         if(!Hash::check($request->current_password, $user->password))
         {
-            return back()->withErrors(['current_password' => 'Nieprawidłowe stare hasło!']);
+            return back()->with('error','Nieprawidłowe stare hasło!');
         }
 
         $user->password = Hash::make($request->password);
         $user->save();
 
-        return back()->with('status', 'Hasło zostało zmienione pomyślnie.');
+        return back()->with('success', 'Hasło zostało zmienione pomyślnie.');
     }
 }

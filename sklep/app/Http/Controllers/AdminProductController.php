@@ -114,7 +114,7 @@ class AdminProductController extends Controller
             ]);
         }
 
-        return back();
+        return redirect('/admin/products')->with('success','Pomyślnie edytowano przedmiot!');
     }
 
     public function remove(Product $product)

@@ -25,7 +25,7 @@ class AdminCategoryController extends Controller
             'slug' => $request->slug,
         ]);
 
-        return back()->with('Success','Pomyślnie dodano kategorię!');
+        return back()->with('success','Pomyślnie dodano kategorię!');
     }
 
     public function remove(Category $category)
@@ -36,7 +36,7 @@ class AdminCategoryController extends Controller
         }
 
         $category->delete();
-        return back()->with('Success','Pomyślnie usunięto kategorię!');
+        return back()->with('success','Pomyślnie usunięto kategorię!');
     }
 
     public function edit(Category $category)
@@ -56,7 +56,7 @@ class AdminCategoryController extends Controller
             'slug' => $request->slug,
         ]);
 
-        return back();
+        return redirect('admin/categories')->with('success','Pomyślnie edytowano kategorię!');
         
     }
 }

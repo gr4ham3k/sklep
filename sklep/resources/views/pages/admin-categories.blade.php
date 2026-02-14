@@ -6,11 +6,6 @@
 
 @section('content')
     <div class="admin-categories">
-        @if (session('error'))
-            <div class="alert-error">
-                {{ session('error') }}
-            </div>
-        @endif
         <h2>Kategorie</h2>
         <form action="{{ route('categories.insert') }}" method="POST">
             @csrf
@@ -22,6 +17,18 @@
 
             <button type="submit">Dodaj</button>
         </form>
+        @if (session('success'))
+            <div class="success">
+                {{ session('success') }}
+            </div>
+        @endif
+        @if ($errors->any())
+            <div class="error">
+                @foreach ($errors->all() as $error)
+                    <p>{{ $error }}</p>
+                @endforeach
+            </div>
+        @endif
         <table>
             <thead>
                 <th>Nazwa</th>

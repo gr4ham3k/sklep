@@ -90,5 +90,10 @@
                 <button>ZAMÓW</button>
             </form>
         </div>
+        @if (session('error'))
+            <div class="error">
+                {{ session('error') }}
+            </div>
+        @endif
     </div>
 @endsection

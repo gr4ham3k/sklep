@@ -17,5 +17,12 @@ return [
         'username' => 'nazwa użytkownika',
         'email' => 'email',
         'password' => 'hasło',
+        'current_password' => 'stare hasło',
+        'name' => 'nazwa',
+        'description' => 'opis',
+        'price' => 'cena',
+        'stock_quantity' => 'ilość',
+        'image' => 'zdjęcie',
+        'category_id' => 'kategoria',
     ],
 ];

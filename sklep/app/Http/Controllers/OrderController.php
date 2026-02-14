@@ -96,6 +96,6 @@ class OrderController extends Controller
             $cart->items()->delete();
         });
 
-        return redirect('/')->with('success','Zamówienie złożone!');
+        return redirect('/orders')->with('success','Zamówienie złożone!');
     }
 }

@@ -8,7 +8,7 @@
 
     <div class="product">
         <div class="product-left">
-            <p class="product-name">{{ $product->name }}lollollollollollollollollollollollollollollollollollollollol</p>
+            <p class="product-name">{{ $product->name }}</p>
             <img src="{{ asset('storage/'.$product->image->image_path) }}" alt="{{ $product->image->alt_text }}">
         </div>
         <div class="product-right">
@@ -35,6 +35,16 @@
                     </form>
                 </div>
             </div>
+            @if (session('error'))
+                <div class="error">
+                    {{ session('error') }}
+                </div>
+            @endif
+            @if (session('success'))
+            <div class="success">
+                {{ session('success') }}
+            </div>
+        @endif
             
         </div>
     </div>

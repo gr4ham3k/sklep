@@ -7,6 +7,11 @@
 @section('content')
     <div class="admin-products">
         <h2>Produkty</h2>
+        @if (session('success'))
+            <div class="success">
+                {{ session('success') }}
+            </div>
+        @endif
         <a class="admin-add-product" href="{{ route('products.add') }}">
             <div>
                 Dodaj produkt

@@ -20,6 +20,13 @@
             <button type="submit" form="edit-category-form">Zapisz zmiany</button>
             <a href="{{ route('categories.index') }}">Anuluj</a>
         </div>
+        @if ($errors->any())
+            <div class="error">
+                @foreach ($errors->all() as $error)
+                    <p>{{ $error }}</p>
+                @endforeach
+            </div>
+        @endif
     </div>
     
 @endsection

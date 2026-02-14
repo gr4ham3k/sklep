@@ -10,8 +10,8 @@
             <p>LOGOWANIE</p>
             <form method="POST" action="/login">
                 @csrf
-                <input type="email" name="email" placeholder="Email" maxlength="50" required>
-                <input type="password" name="password" placeholder="Hasło" maxlength="30" required>
+                <input type="email" name="email" placeholder="Email" maxlength="50">
+                <input type="password" name="password" placeholder="Hasło" maxlength="30">
                 <button class="login-btn">Zaloguj się</button>
             </form>
             @if ($errors->any())

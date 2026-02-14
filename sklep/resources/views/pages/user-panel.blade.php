@@ -33,6 +33,26 @@
 
                 <button type="submit">Zapisz</button>
             </form>
+            
         </div>
+        @if ($errors->any())
+        <div class="error">
+            @foreach ($errors->all() as $error)
+                <p>{{ $error }}</p>
+            @endforeach
+        </div>
+        @endif
+
+        @if (session('success'))
+            <div class="success">
+                {{ session('success') }}
+            </div>
+        @endif
+
+        @if (session('error'))
+            <div class="error">
+                {{ session('error') }}
+            </div>
+        @endif
     </div>
 @endsection
