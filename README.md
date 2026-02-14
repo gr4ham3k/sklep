@@ -38,8 +38,11 @@ To jest prosty sklep internetowy stworzony w Laravel z wykorzystaniem bazy danyc
 7. Wygeneruj klucz aplikacji Laravel:
    php artisan key:generate
 
-7. Uruchom serwer deweloperski:
+8. Poprawne wyświetlanie zdjęć:
+   php artisan storage:link
+
+10. Uruchom serwer deweloperski:
    php artisan serve
    
-9. Aplikacja powinna być dostępna pod adresem: http://127.0.0.1:8000
+11. Aplikacja powinna być dostępna pod adresem: http://127.0.0.1:8000
 
