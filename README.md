@@ -30,8 +30,9 @@ To jest prosty sklep internetowy stworzony w Laravel z wykorzystaniem bazy danyc
    DB_DATABASE=twoja_baza
    DB_USERNAME=twoj_uzytkownik
    DB_PASSWORD=twoje_haslo
+   oraz SESSION_DRIVER=file
 
-4. Utwórz bazę danych w PostgreSQL:
+5. Utwórz bazę danych w PostgreSQL:
    CREATE DATABASE twoja_baza;
    
 6. Zaimportuj plik SQL do bazy danych.
