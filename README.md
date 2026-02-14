@@ -10,7 +10,7 @@ To jest prosty sklep internetowy stworzony w Laravel z wykorzystaniem bazy danyc
 - Composer
 - PostgreSQL
 - Laravel 10
-- Node.js + npm (jeśli używasz frontendowych zależności)
+- Node.js + npm
 
 ---
 
@@ -20,7 +20,7 @@ To jest prosty sklep internetowy stworzony w Laravel z wykorzystaniem bazy danyc
    git clone <TWÓJ_LINK_DO_REPO>
    cd <Nazwa_Folderu_Projektu>
 
-2.Zainstaluj zależności PHP:
+2. Zainstaluj zależności PHP:
    composer install
 
 3. Skopiuj plik .env.example do .env i ustaw dane do bazy danych PostgreSQL:
