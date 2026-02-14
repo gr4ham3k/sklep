@@ -1,12 +1,132 @@
-.admin-categories-edit{
+/* ---------------- ADMIN CATEGORIES EDIT ---------------- */
+.admin-categories-edit {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 0 20px;
+    color: #fff;
+}
+
+/* ---------------- H2 ---------------- */
+.admin-categories-edit h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #c8102e;
+    font-weight: 600;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #c8102e;
+    padding-bottom: 10px;
+}
+
+/* ---------------- FORM ---------------- */
+.admin-categories-edit form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+/* LABELS */
+.admin-categories-edit label {
+    font-weight: 600;
+    color: #c8102e;
+    margin-bottom: 5px;
+}
+
+/* INPUTS */
+.admin-categories-edit input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #1a1a1a;
+    color: #fff;
+    font-size: 1rem;
+    width: 100%;
+    transition: border 0.2s ease, background-color 0.2s ease;
+}
+
+.admin-categories-edit input:focus {
+    outline: none;
+    border: 1px solid #c8102e;
+    background-color: #111;
+}
+
+/* ---------------- BUTTONS ---------------- */
+.edit-category-btns {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.edit-category-btns button,
+.edit-category-btns a {
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* SAVE BUTTON */
+.edit-category-btns button {
+    background-color: #c8102e;
+    color: #fff;
+    border: none;
+}
+
+.edit-category-btns button:hover {
+    background-color: #fff;
+    color: #c8102e;
+}
+
+/* CANCEL LINK */
+.edit-category-btns a {
+    background-color: #444;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.edit-category-btns a:hover {
+    background-color: #c8102e;
+    color: #fff;
+}
+
+/* ---------------- ERROR MESSAGES ---------------- */
+.error {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ff0000;
+    color: #fff;
+    border-radius: 5px;
     text-align: center;
 }
 
-.admin-categories-edit form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 768px) {
+    .admin-categories-edit {
+        margin: 20px auto;
+    }
+
+    .admin-categories-edit h2 {
+        font-size: 1.7rem;
+    }
+
+    .edit-category-btns {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .edit-category-btns button,
+    .edit-category-btns a {
+        width: 100%;
+    }
 }
-
-

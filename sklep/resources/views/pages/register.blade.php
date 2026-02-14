@@ -6,8 +6,7 @@
     <link href="{{ asset('css/register.css') }}" rel="stylesheet">
 @endpush
 
-    <div class="register-div">
-        <div class="register-form">
+    <div class="auth-page">
             <p>REJESTRACJA</p>
             <form method="POST" action="/register">
                 @csrf
@@ -26,6 +25,5 @@
                 </ul>
             </div>
         @endif  
-        </div>
     </div>
 @endsection

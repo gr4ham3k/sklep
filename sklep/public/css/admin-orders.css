@@ -1,34 +1,138 @@
-.admin-orders h2{
+/* ---------------- ADMIN ORDERS ---------------- */
+.admin-orders {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 20px;
+    color: #fff;
+}
+
+/* ---------------- H2 ---------------- */
+.admin-orders h2 {
     text-align: center;
+    font-size: 2rem;
+    color: #c8102e;
+    font-weight: 600;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #c8102e;
+    padding-bottom: 10px;
 }
 
-.admin-orders table{
+/* ---------------- TABLE ---------------- */
+.admin-orders table {
+    width: 100%;
+    border-collapse: collapse;
     margin: 0 auto;
+    font-size: 1rem;
+    background-color: #222;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-.admin-orders table td{
+/* TABLE HEAD */
+.admin-orders th {
+    background-color: #c8102e;
+    color: #fff;
+    font-weight: 600;
     padding: 10px;
 }
 
-.admin-orders table,tr,td,th{
-    border: 1px solid black;
-    border-collapse: collapse;
+/* TABLE CELLS */
+.admin-orders td {
+    padding: 10px;
+    border: 1px solid #444;
     text-align: center;
-    margin-bottom: 20px;
 }
 
-.admin-orders th{
-    background-color: yellow;
+/* ROW STYLES BASED ON STATUS */
+.order-completed {
+    background-color: #3a6f3a; /* ciemniejsza zieleń */
 }
 
-.order-completed{
-    background-color: rgb(99, 251, 99);
+.order-cancelled {
+    background-color: #a32d2d; /* ciemniejsza czerwień */
 }
 
-.order-cancelled{
-    background-color: rgb(232, 72, 72);
+.order-pending {
+    background-color: #3b3f9e; /* ciemniejszy niebieski */
 }
 
-.order-pending{
-    background-color: rgb(109, 133, 254);
+/* ---------------- SELECT ---------------- */
+.status-select {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #111;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.status-select:focus {
+    outline: none;
+    border: 1px solid #c8102e;
+    background-color: #222;
+}
+
+/* ---------------- LINKS ---------------- */
+.admin-orders a {
+    color: #c8102e;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.admin-orders a:hover {
+    color: #fff;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 1200px) {
+    .admin-orders table {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .admin-orders table th,
+    .admin-orders table td {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-orders table,
+    .admin-orders thead,
+    .admin-orders tbody,
+    .admin-orders th,
+    .admin-orders td,
+    .admin-orders tr {
+        display: block;
+    }
+
+    .admin-orders tr {
+        margin-bottom: 15px;
+        border-bottom: 2px solid #444;
+    }
+
+    .admin-orders td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .admin-orders td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        padding-left: 10px;
+        font-weight: 600;
+        text-align: left;
+        color: #c8102e;
+    }
+
+    .admin-orders th {
+        display: none;
+    }
 }

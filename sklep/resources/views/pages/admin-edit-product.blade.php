@@ -6,6 +6,7 @@
 
 @section('content')
     <div class="admin-product-edit">
+        <h2>Edycja</h2>
         @if($product->image)
             <img src="{{ asset('storage/'.$product->image->image_path) }}" alt="{{ $product->image->alt_text }}">
         @endif

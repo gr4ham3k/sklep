@@ -1,11 +1,168 @@
-.admin-product-edit{
+/* ---------------- ADMIN PRODUCT EDIT ---------------- */
+.admin-product-edit {
     display: flex;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    color: #fff;
 }
 
-.admin-product-edit form input, textarea,select{
-    display: block;
+/* ---------------- H2 ---------------- */
+.admin-product-edit h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    color: #c8102e;
+    margin-bottom: 20px;
+    font-weight: 600;
 }
 
-.admin-product-edit img{
-    width: 50%;
+/* ---------------- PRODUCT IMAGE ---------------- */
+.admin-product-edit img {
+    width: 100%;
+    max-width: 500px;
+    max-height: max-content;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+/* ---------------- FORM ---------------- */
+.admin-product-edit form {
+    flex: 1 1 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-product-edit label {
+    font-weight: 600;
+    color: #c8102e;
+}
+
+.admin-product-edit input,
+.admin-product-edit textarea,
+.admin-product-edit select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #222;
+    color: #fff;
+    font-size: 1rem;
+    width: 100%;
+    transition: border 0.2s ease, background-color 0.2s ease;
+    margin-bottom: 20px;
+}
+
+.admin-product-edit input:focus,
+.admin-product-edit textarea:focus,
+.admin-product-edit select:focus {
+    outline: none;
+    border: 1px solid #c8102e;
+    background-color: #1a1a1a;
+}
+
+.admin-product-edit textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* ---------------- BUTTONS ---------------- */
+.edit-product-btns {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.edit-product-btns button,
+.edit-product-btns a {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.edit-product-btns button {  
+    background-color: #c8102e;
+    color: #fff;
+    border: none;
+}
+
+.edit-product-btns button:hover {
+    background-color: #fff;
+    color: #c8102e;
+}
+
+.edit-product-btns a {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit-product-btns a:hover {
+    background-color: #c8102e;
+    color: #fff;
+}
+
+/* ---------------- DELETE BUTTON ---------------- */
+.admin-product-edit form[action*="remove"] button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.admin-product-edit form[action*="remove"] button:hover {
+    background-color: #fff;
+    color: #ff0000;
+}
+
+/* ---------------- ERROR MESSAGES ---------------- */
+.error {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #c8102e;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 1024px) {
+    .admin-product-edit {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-product-edit {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .admin-product-edit img,
+    .admin-product-edit form {
+        width: 100%;
+    }
+
+    .edit-product-btns {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .edit-product-btns button,
+    .edit-product-btns a {
+        width: 100%;
+    }
 }

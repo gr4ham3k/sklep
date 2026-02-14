@@ -1,23 +1,93 @@
-.admin-order-details h2{
-    text-align: center;
-}
-
-.admin-order-details table{
-    margin: 0 auto;
-    text-align: center;
+/* ---------------- ADMIN ORDER DETAILS ---------------- */
+.admin-order-details {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    color: #fff;
     
 }
 
-.admin-order-details table, tr,td,th{
-    border: 1px solid black;
+/* ---------------- H2 ---------------- */
+.admin-order-details h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #c8102e;
+    font-weight: 600;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #c8102e;
+    padding-bottom: 10px;
+}
+
+/* ---------------- TABLE ---------------- */
+.admin-order-details table {
+    width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
+    margin: 0 auto 30px auto;
+    background-color: #222;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-td{
-    width: 25%;
+/* HEADERS */
+.admin-order-details th {
+    background-color: #c8102e;
+    color: #fff;
+    padding: 10px;
+    font-weight: 600;
 }
 
-.admin-order-details img{
-    width: 25%;
+/* CELLS */
+.admin-order-details td {
+    padding: 10px;
+    border: 1px solid #444;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* IMAGE CELLS */
+.admin-order-details img {
+    width: 100px;
+    border-radius: 5px;
+}
+
+/* RESPONSIVE ---------------- */
+@media (max-width: 992px) {
+    .admin-order-details table, 
+    .admin-order-details thead, 
+    .admin-order-details tbody, 
+    .admin-order-details th, 
+    .admin-order-details td, 
+    .admin-order-details tr {
+        display: block;
+    }
+
+    .admin-order-details tr {
+        margin-bottom: 15px;
+        border-bottom: 2px solid #444;
+    }
+
+    .admin-order-details td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .admin-order-details td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        padding-left: 10px;
+        font-weight: 600;
+        text-align: left;
+        color: #c8102e;
+    }
+
+    .admin-order-details th {
+        display: none;
+    }
+
+    .admin-order-details img {
+        width: 80px;
+    }
 }

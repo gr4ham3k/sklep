@@ -1,26 +1,115 @@
-.order-details{
-    display: block;
+/* ---------------- ORDER DETAILS ---------------- */
+.order-details {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    color: #fff;
 }
 
-.order-details img{
-    width: 25%;
-}
-
-table{
-    margin: 0 auto;
-}
-
-.order-details table tr td{
+.order-details-title {
     text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #c8102e;
+    margin-bottom: 25px;
 }
 
-.order-details-title{
+/* ---------------- TABLE ---------------- */
+.order-details-table {
+    width: 100%;
+    overflow-x: auto;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.order-details-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.order-details-table th, .order-details-table td {
+    padding: 12px;
     text-align: center;
-    font-size: xx-large;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    border-bottom: 1px solid #444;
 }
 
-td{
-    width: 20%;
+.order-details-table th {
+    font-weight: 600;
+    color: #fff;
+}
+
+.order-details-table tr:nth-child(even) {
+    background-color: #222;
+}
+
+.order-details-table tr:hover {
+    background-color: #c8102e;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.order-details-table td img {
+    width: 80px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 1024px) {
+    .order-details-table th, .order-details-table td {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+
+    .order-details-table td img {
+        width: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .order-details-table th, .order-details-table td {
+        font-size: 0.9rem;
+    }
+
+    .order-details-table td img {
+        width: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .order-details-table table,
+    .order-details-table thead,
+    .order-details-table tbody,
+    .order-details-table th,
+    .order-details-table td,
+    .order-details-table tr {
+        display: block;
+    }
+
+    .order-details-table tr {
+        margin-bottom: 15px;
+        border-bottom: 1px solid #444;
+    }
+
+    .order-details-table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .order-details-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        padding-left: 10px;
+        font-weight: 600;
+        text-align: left;
+        color: #c8102e;
+    }
+
+    .order-details-table th {
+        display: none;
+    }
 }

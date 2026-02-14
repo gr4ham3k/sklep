@@ -1,65 +1,107 @@
-.register-div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* ---------------- AUTH PAGES (LOGIN & REGISTER) ---------------- */
+.auth-page {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
     text-align: center;
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ---------------- PAGE TITLE ---------------- */
+.auth-page p,
+.auth-page h2 {
+    font-size: xx-large;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+/* ---------------- FORM ---------------- */
+.auth-page form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
     margin-bottom: 20px;
 }
 
-.register-form{
-    width: 300px; 
-}
-
-.register-form form input{
-    display: block;
-    width: 100%;             
-    padding: 12px 15px;       
-    margin-bottom: 15px;      
-    border: 1px solid #ccc;   
-    border-radius: 8px;       
-    font-size: 16px;           
-    transition: all 0.3s;    
+.auth-page form input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: all 0.2s ease;
     box-sizing: border-box;
 }
 
-.register-form form input:focus {
-    border-color: #007BFF;    
-    box-shadow: 0 0 5px rgba(0,123,255,0.5);
+.auth-page form input:focus {
     outline: none;
+    border: 1px solid #c8102e;
 }
 
-.register-form form button {
-    width: 60%;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    background-color: #820101;
-    color: white;
+/* ---------------- BUTTONS ---------------- */
+.auth-page form button {
+    padding: 10px 25px;
     font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+    background-color: #c8102e;
+    color: #fff;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: all 0.2s ease;
+    margin: 0 auto;
+    max-width: 200px;
 }
 
-.register-form form button:hover {
-    background-color: #c00026;
+.auth-page form button:hover {
+    background-color: #fff;
+    color: #c8102e;
 }
 
-.register-form p {
-    font-size: 26px;           
-    font-weight: 600;          
-    color: #333;               
-    text-transform: uppercase; 
-    margin-bottom: 20px;       
-    letter-spacing: 1px;       
-    font-family: 'Arial', sans-serif; 
+/* ---------------- ERROR MESSAGES ---------------- */
+.auth-page .register-errors,
+.auth-page .login-errors {
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
-
-.register-errors ul{
+.auth-page .register-errors ul,
+.auth-page .login-errors ul {
+    padding-left: 0;
+    list-style: none;
     text-align: left;
 }
 
-.register-errors li{
+.auth-page .register-errors li,
+.auth-page .login-errors li {
+    color: red;
     margin-bottom: 5px;
+}
+
+/* ---------------- LINKS ---------------- */
+.auth-page .forgot-password {
+    margin-top: 10px;
+}
+
+.auth-page .forgot-password a {
+    color: #c8102e;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-page .forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 768px) {
+    .auth-page form input {
+        max-width: 100%;
+    }
 }

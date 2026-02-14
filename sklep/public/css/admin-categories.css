@@ -1,26 +1,161 @@
-.admin-categories h2{
+/* ---------------- ADMIN CATEGORIES ---------------- */
+.admin-categories {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    color: #fff;
+}
+
+/* ---------------- H2 ---------------- */
+.admin-categories h2 {
     text-align: center;
+    font-size: 2rem;
+    color: #c8102e;
+    font-weight: 600;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #c8102e;
+    padding-bottom: 10px;
 }
 
-.alert-error{
-    color: red;
-    text-align: center;
-    margin-top: 10px;
-}
-
-.admin-categories table{
-    margin: 0 auto;
-}
-
-.admin-categories form{
+/* ---------------- FORM ---------------- */
+.admin-categories form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
+    gap: 15px;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }
 
-.admin-categories input{
-    display: block;
+/* LABELS */
+.admin-categories label {
+    font-weight: 600;
+    color: #c8102e;
+    margin-bottom: 5px;
 }
 
+/* INPUTS */
+.admin-categories input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #1a1a1a;
+    color: #fff;
+    font-size: 1rem;
+    width: 100%;
+    transition: border 0.2s ease, background-color 0.2s ease;
+}
 
+.admin-categories input:focus {
+    outline: none;
+    border: 1px solid #c8102e;
+    background-color: #111;
+}
+
+/* SUBMIT BUTTON */
+.admin-categories button {
+    padding: 12px 20px;
+    background-color: #c8102e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.admin-categories button:hover {
+    background-color: #fff;
+    color: #c8102e;
+}
+
+/* ---------------- TABLE ---------------- */
+.admin-categories table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.admin-categories table th,
+.admin-categories table td {
+    border: 1px solid #444;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.admin-categories table th {
+    background-color: #111;
+}
+
+.admin-categories table td a {
+    color: #c8102e;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.admin-categories table td a:hover {
+    text-decoration: underline;
+}
+
+/* DELETE BUTTON */
+.admin-categories table td form button {
+    padding: 5px 10px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.admin-categories table td form button:hover {
+    background-color: #fff;
+    color: #ff0000;
+}
+
+/* ---------------- SUCCESS / ERROR MESSAGES ---------------- */
+.success {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #c8102e;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.error {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ff0000;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 768px) {
+    .admin-categories {
+        margin: 20px auto;
+    }
+
+    .admin-categories h2 {
+        font-size: 1.7rem;
+    }
+
+    .admin-categories form {
+        padding: 15px;
+    }
+
+    .admin-categories table th,
+    .admin-categories table td {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}

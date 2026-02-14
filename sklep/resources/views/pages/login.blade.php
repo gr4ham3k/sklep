@@ -5,8 +5,7 @@
 @endpush
 
 @section('content')
-    <div class="register-div">
-        <div class="register-form">
+    <div class="auth-page">
             <p>LOGOWANIE</p>
             <form method="POST" action="/login">
                 @csrf
@@ -30,6 +29,5 @@
                     </a>
                 @endif
             </div>
-        </div>
     </div>
 @endsection

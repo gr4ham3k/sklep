@@ -1,11 +1,128 @@
-.user-panel{
+/* ---------------- USER PANEL ---------------- */
+.user-panel {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #1a1a1a; /* ciemne tło */
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }
 
-.user-panel form input{
+.user-panel h2 {
+    margin-bottom: 30px;
+    color: #c8102e; /* czerwony nagłówek */
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+/* ---------------- SECTIONS ---------------- */
+.change-username, .change-password {
+    width: 100%;
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: #000; /* czarny box */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.change-username p,
+.change-password p {
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* ---------------- FORM ELEMENTS ---------------- */
+.user-panel form,p {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.user-panel form input {
     display: block;
-    margin-bottom: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #1a1a1a;
+    color: #fff;
+    font-size: 1rem;
+    transition: border 0.2s ease, background 0.2s ease;
+}
+
+.user-panel form input:focus {
+    outline: none;
+    border: 1px solid #c8102e; /* czerwony focus */
+    background-color: #222;
+}
+
+/* ---------------- BUTTONS ---------------- */
+.user-panel form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #c8102e;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.user-panel form button:hover {
+    background-color: #fff;
+    color: #c8102e;
+}
+
+/* ---------------- MESSAGES ---------------- */
+.success, .error {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.success {
+    background-color: #0a8f0a;
+    color: #fff;
+}
+
+.error {
+    background-color: #c8102e;
+    color: #fff;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 768px) {
+    .user-panel {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .change-username, .change-password {
+        padding: 10px;
+    }
+
+    .user-panel form input, 
+    .user-panel form button {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .user-panel h2 {
+        font-size: 1.5rem;
+    }
+
+    .user-panel form input, 
+    .user-panel form button {
+        padding: 8px;
+    }
 }

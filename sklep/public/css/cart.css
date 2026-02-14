@@ -1,44 +1,224 @@
-.cart-div table tr td img{
-    max-width: 100px;
-}
-
-.cart-title{
+/* ---------------- CART LAYOUT ---------------- */
+.cart-title {
     text-align: center;
-    font-size: xx-large;
-    margin-top: 10px;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 20px 0;
+    color: #c8102e; /* czerwony nagłówek */
 }
 
-.cart-div table tr td a{
-    text-decoration: none
+.cart-div {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+    background-color: #1a1a1a;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    overflow-x: auto;
 }
 
-.cart-checkout{
+.cart-div table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart-div table th,
+.cart-div table td {
+    padding: 12px;
+    
+    border-bottom: 1px solid #444;
+}
+
+.cart-div table th {
+    color: #fff;
+    font-weight: 600;
+}
+
+.cart-div table tr td img {
+    max-width: 100px;
+    border-radius: 5px;
+}
+
+.cart-div table tr td span {
+    display: block;
+    color: #fff;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #fff9;
+    margin-right: 8px;
+}
+
+.sale-price {
+    color: #c8102e;
+    font-weight: 700;
+}
+
+/* ---------------- QUANTITY INPUT ---------------- */
+.cart-div input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+}
+
+.cart-div input[type="number"]:focus {
+    outline: none;
+    border: 1px solid #c8102e;
+}
+
+/* ---------------- REMOVE BUTTON ---------------- */
+.cart-div button {
+    background-color: #c8102e;
+    border: none;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.cart-div button:hover {
+    background-color: #fff;
+    color: #c8102e;
+}
+
+/* ---------------- TOTAL ---------------- */
+.total-div {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 0;
+}
+
+#total {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/* ---------------- CHECKOUT FORM ---------------- */
+.cart-checkout {
     display: flex;
     justify-content: center;
-    
+    margin-top: 20px;
 }
 
-.cart-checkout form input{
-    display: block;
-    margin-bottom: 10px;
-    gap: 30px;
+.cart-checkout form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
 }
 
-.cart-checkout button{
-    margin-right: 10px;
+.cart-checkout form input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #222;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.cart-checkout form input:focus {
+    outline: none;
+    border: 1px solid #c8102e;
+}
+
+.cart-checkout form button {
+    padding: 12px;
+    background-color: #c8102e;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.2s ease-in-out;
     margin-bottom: 20px;
 }
 
-.total-div{
-    display: flex;
-    justify-content: flex-end;
+.cart-checkout form button:hover {
+    background-color: #fff;
+    color: #c8102e;
 }
 
-#total{
-    font-weight: bolder;
+/* ---------------- ERROR MESSAGE ---------------- */
+.error {
+    width: 100%;
+    max-width: 400px;
+    margin: 15px auto 0;
+    padding: 10px;
+    background-color: #c8102e;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 600;
 }
 
-.old-price{
-    text-decoration: line-through;
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 1024px) {
+    .cart-div table th, .cart-div table td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .cart-div table tr td img {
+        max-width: 80px;
+    }
+
+    .cart-checkout form {
+        max-width: 100%;
+        padding: 0 10px;
+    }
 }
 
+@media (max-width: 768px) {
+    .cart-div {
+        padding: 0 10px;
+    }
+
+    .cart-div table tr td span,
+    .cart-div table tr td p {
+        font-size: 0.9rem;
+    }
+
+    .cart-checkout form input {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .cart-checkout form button {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cart-div table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .cart-div table tr {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #444;
+    }
+
+    .cart-div table tr td {
+        width: 50%;
+        text-align: left;
+        padding: 5px 10px;
+    }
+
+    .total-div {
+        justify-content: center;
+        font-size: 1rem;
+    }
+}
